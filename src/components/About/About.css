@@ -1,0 +1,76 @@
+.aboutSection {
+  text-align: center;
+  padding-top: 33px;
+}
+
+.aboutSection .about-me .about-container {
+  height: 50px;
+  display: flex;
+  flex-direction: column;
+}
+
+.aboutSection .about-me .about-container .left {
+  display: none;
+}
+
+.aboutSection .about-me .about-container .right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.aboutSection .about-me .about-container .right h2 {
+  padding-top: 8px;
+}
+.aboutSection .about-me .about-container .right p {
+font-size: 20px;
+}
+
+.aboutSection .about-me .about-container .right .tag {
+  padding-bottom: 8px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.aboutSection .about-me .about-container .right .interests {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-top: 8px;
+}
+
+.aboutSection .about-me .about-container .right .interests span {
+  padding: 4px 12px;
+  margin: 4px;
+  background-color: #faa11b;
+  color: rgb(255, 255, 255);
+  border-radius: 16px;
+}
+
+
+/* for screen bigger than 768px */
+@media (min-width: 768px) {
+  .aboutSection .about-me .about-container {
+    flex-direction: row-reverse;
+  }
+
+  .aboutSection .about-me .about-container .left {
+    display: block;
+    flex: 1;
+    order: 2;
+  }
+
+  .aboutSection .about-me .about-container .left .userImg2 {
+    width: 70%;
+    max-width: 200px; /* Adjust as needed */
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .aboutSection .about-me .about-container .right {
+    flex: 1;
+    order: 1;
+    margin-right: 20px; /* Adjust spacing between left and right sections */
+  }
+}

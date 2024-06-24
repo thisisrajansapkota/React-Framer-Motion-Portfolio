@@ -1,0 +1,143 @@
+/* Reset default margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Ensure video takes up entire screen */
+.heroSec {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.video-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Flexbox for content */
+.content {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 2rem; /* Adjust padding as needed */
+  color: #ffffff; /* Text color */
+}
+
+.left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.name h1 {
+  font-size: 3rem; /* Example font size adjustment */
+  font-weight: bold; /* Example font weight adjustment */
+}
+
+.tag h3 {
+  font-size: 1.5rem; /* Example font size adjustment */
+  font-weight: 400; /* Example font weight adjustment */
+}
+
+.sub-tag {
+  font-size: 1rem; /* Example font size adjustment */
+  margin-top: 1rem; /* Example margin adjustment */
+}
+
+.cv-btn {
+  background-color: #faa11b; /* Example button background color */
+  color: #ffffff; /* Example button text color */
+  padding: 1rem 2rem; /* Example button padding */
+  border: none;
+  cursor: pointer;
+  border-radius: 2rem; /* Example button border radius */
+  margin-top: 1rem; /* Example margin adjustment */
+}
+
+.right {
+  position: relative;
+  flex: 1;
+}
+
+.right img {
+  position: absolute;
+  top: 50px; 
+  right: 25%; 
+  max-width: 30%; /* Adjust size of image */
+  height: auto;
+  border-radius: 50%;
+  box-shadow: 0 0 15px rgb(250,161,27); 
+  filter: drop-shadow(0 0 5px rgba(255, 217, 0, 0.8)); 
+  transition: transform 0.3s ease-in-out;
+}
+
+.right img:hover {
+  transform: scale(1.05);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column; 
+    align-items: center;
+    text-align: center;
+  }
+
+  .content h1{
+    font-size: 29px;
+  }
+
+
+  
+
+  .left, .right {
+    width: 60%;
+    align-items: center;
+
+
+  }
+
+  .right img {
+  margin-left: 30%;
+    position: relative;
+    margin-top: 2rem; /* Example margin adjustment */
+    max-width: 40%; /* Adjust size for smaller screens */
+    align-self: center; /* Center align on smaller screens */
+  }
+}
+
+@media (max-width: 652px) {
+  .content {
+    flex-direction: column; 
+    align-items: center;
+    text-align: center;
+  }
+
+
+  
+
+  .left, .right {
+    width: 70%;
+    align-items: center;
+
+
+  }
+
+  .right img {
+  margin-left: 30%;
+    position: relative;
+    margin-top: 2rem; /* Example margin adjustment */
+    max-width: 50%; /* Adjust size for smaller screens */
+    align-self: center; /* Center align on smaller screens */
+  }
+}
