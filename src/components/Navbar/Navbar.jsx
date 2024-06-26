@@ -23,24 +23,25 @@ function Navbar() {
             initial={{ opacity: 0, scale: 0.5 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{
-              duration: 1,
+              duration: 3,
               type: "spring",
             }}
           >
             <li>
               <a href="https://github.com/thisisrajansapkota" target="_blank">
-                <img src="../../../src/assets/icons/github.png" alt="github" />
+                <img src="../../../src/assets/icons/github.png" alt="github" 
+                style={{width:37, height:37}}  />
               </a>
             </li>
             <li>
               <a
                 href="https://www.linkedin.com/in/rajan-sapkota-88b95a18b/"
                 target="_blank"
-              >
+             >
                 <img
                   src="../../../src/assets/icons/linkedin.png"
                   alt="linkedin"
-                />
+                 />
               </a>
             </li>
             <li>
