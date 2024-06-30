@@ -3,6 +3,9 @@ import "./Navbar.css";
 import { motion } from "framer-motion";
 import sunIcon from "../../assets/sun.svg";
 import moonIcon from "../../assets/moon.svg";
+import githubImg from "../../../src/assets/icons/github.png";
+import linkedinImg from "../../../src/assets/icons/linkedin.png";
+
 // import Sidebar from "./Sidebar";
 
 function Navbar({ darkMode, handleClick }) {
@@ -60,7 +63,7 @@ function Navbar({ darkMode, handleClick }) {
             <li>
               <a href="https://github.com/thisisrajansapkota" target="_blank">
                 <img
-                  src="../../../src/assets/icons/github.png"
+                  src={githubImg}
                   alt="github"
                   style={{ width: 37, height: 37 }}
                 />
@@ -106,7 +109,7 @@ function Navbar({ darkMode, handleClick }) {
             <li>
               <a href="https://github.com/thisisrajansapkota" target="_blank">
                 <img
-                  src="../../../src/assets/icons/github.png"
+                  src={githubImg}
                   alt="github"
                   style={{ width: 37, height: 37 }}
                 />
@@ -118,7 +121,7 @@ function Navbar({ darkMode, handleClick }) {
                 target="_blank"
               >
                 <img
-                  src="../../../src/assets/icons/linkedin.png"
+                  src={linkedinImg}
                   alt="linkedin"
                 />
               </a>
