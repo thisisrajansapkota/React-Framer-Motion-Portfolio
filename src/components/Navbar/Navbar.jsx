@@ -6,7 +6,6 @@ import moonIcon from "../../assets/moon.svg";
 import githubImg from "../../../src/assets/icons/github.png";
 import linkedinImg from "../../../src/assets/icons/linkedin.png";
 
-// import Sidebar from "./Sidebar";
 
 function Navbar({ darkMode, handleClick }) {
   const [sideBar, setSideBar] = useState(false);
@@ -14,8 +13,13 @@ function Navbar({ darkMode, handleClick }) {
     setSideBar(!sideBar);
   };
 
+
+ 
   return (
-    <div className="navbar" style={{backgroundColor: darkMode? "black" : "#fff"}}>
+    <div
+      className="navbar"
+      style={{ backgroundColor: darkMode ? "black" : "#fff" }}
+    >
       <div className="navWrapper">
         <div className="navLeft">
           <motion.span
@@ -74,10 +78,7 @@ function Navbar({ darkMode, handleClick }) {
                 href="https://www.linkedin.com/in/rajan-sapkota-88b95a18b/"
                 target="_blank"
               >
-                <img
-                  src="../../../src/assets/icons/linkedin.png"
-                  alt="linkedin"
-                />
+                <img src={linkedinImg} alt="linkedin" />
               </a>
             </li>
             <li>
@@ -94,9 +95,10 @@ function Navbar({ darkMode, handleClick }) {
             </li>
           </motion.ul>
         </div>
-{/* <div className="div"></div> */}
-        <div className={sideBar ? "sidebar open" : "sidebar"}
-        style={{backgroundColor : darkMode? "black" : "white"}}
+        {/* <div className="div"></div> */}
+        <div
+          className={sideBar ? "sidebar open" : "sidebar"}
+          style={{ backgroundColor: darkMode ? "black" : "white" }}
         >
           <motion.ul
             initial={{ opacity: 0, scale: 0.5 }}
@@ -120,10 +122,7 @@ function Navbar({ darkMode, handleClick }) {
                 href="https://www.linkedin.com/in/rajan-sapkota-88b95a18b/"
                 target="_blank"
               >
-                <img
-                  src={linkedinImg}
-                  alt="linkedin"
-                />
+                <img src={linkedinImg} alt="linkedin" />
               </a>
             </li>
             <li>
