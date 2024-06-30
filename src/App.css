@@ -18,9 +18,9 @@ a {
   color: inherit;
 }
 section {
-  height: 100vh;
-  padding: 0 35px;
-  /* scroll-snap-align: center; */
+  /* min-height: 100vh; */
+  /* padding: 0 35px; */
+  scroll-snap-align: center;
 }
 
 /* Dark mode styles */

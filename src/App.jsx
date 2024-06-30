@@ -1,22 +1,22 @@
-import "./App.css";
 import React, { useState } from "react";
-import Navbar from "./components/Navbar/Navbar";
-import Hero from "./components/Hero/Hero";
-import Parallax from "./components/Parallax/Parallax";
-import Skills from "./components/Skills/Skills";
+import "./App.css";
 import About from "./components/About/About";
 import Contact from "./components/Contact/Contact";
-import Footer from "./components/Footer/Footer";
 import FloatingIcon from "./components/FloatingIcon/FloatingIcon";
+import Footer from "./components/Footer/Footer";
+import Hero from "./components/Hero/Hero";
+import Navbar from "./components/Navbar/Navbar";
+import Parallax from "./components/Parallax/Parallax";
+import Skills from "./components/Skills/Skills";
 
 // Import your toggle icon SVGs
-import sunIcon from "./assets/sun.svg";
-import moonIcon from "./assets/moon.svg";
+
+import Portfolio from "./components/Portfolio/Portfolio";
 
 function App() {
   // My default theme is dark mode
   const [darkMode, setDarkMode] = useState(true);
-  const [modeName, setModeName] = useState("light");
+  // const [modeName, setModeName] = useState("light");
   const [currentMode, setCurrentMode] = useState("dark");
 
   const handleClick = () => {
@@ -27,39 +27,33 @@ function App() {
     setCurrentMode(darkMode ? "light" : "dark");
 
     // Toggle modeName state between "dark" and "light"
-    setModeName(darkMode ? "dark" : "light");
+    // setModeName(darkMode ? "dark" : "light");
   };
 
   return (
     <div className={`${currentMode}`}>
-      <Navbar />
-      <div className="toggle-container" onClick={handleClick}>
-        {darkMode ? (
-          <img src={sunIcon} alt="Light Mode" className="toggle-icon" />
-        ) : (
-          <img src={moonIcon} alt="Dark Mode" className="toggle-icon" />
-        )}
-      </div>
+      <Navbar darkMode={darkMode} handleClick={handleClick} />
+
       <section>
-        <Hero />
+        <Hero darkMode={darkMode} />
       </section>
-      <section id="skills">
-        <Parallax type="skills" />
-      </section>
+      <div id="skills">
+        <Parallax type="skills" darkMode={darkMode} />
+      </div>
       <section>
         <Skills />
       </section>
-      <section>Portfolio</section>
-      <section id="about">
-        <Parallax type="about" />
-      </section>
-      <section className="aboutSec">
+      <Portfolio />
+      <div id="about">
+        <Parallax type="about" darkMode={darkMode} />
+      </div>
+      <div className="aboutSec">
         <About />
-      </section>
+      </div>
       <section>
         <Contact />
       </section>
-      <Footer />
+      <Footer darkMode={darkMode} />
       <FloatingIcon />
     </div>
   );

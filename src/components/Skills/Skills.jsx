@@ -15,7 +15,7 @@ import framerMotion from "../../assets/icons/framer-motion.png";
 
 function Skills() {
   return (
-    <div className="section3">
+    <div className="section3" id="skills">
       <div className="skills-container">
         <div className="skills">
           <i className="fa-brands fa-html5"></i>

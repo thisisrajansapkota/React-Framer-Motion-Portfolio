@@ -1,14 +1,16 @@
 /* Base styles for footer */
 footer {
-  min-height: 100px;
+  scroll-snap-align: center;
+  /* min-height: 40px; */
   /* background-color: #000;  */
   color: #fff; /* Replace with your desired text color */
-  padding: 4rem 0;
+  padding-top: 2rem;
+  padding-bottom: 1 rem;
   text-align: center; /* Center-align text content */
 }
 
 .footer-container {
-  min-height: 100px;
+  /* min-height: 100px; */
   display: flex;
   justify-content: space-between; /* Align items on opposite ends */
   flex-wrap: wrap;
@@ -47,14 +49,13 @@ footer {
 
 .links a,
 .social-links a {
-  color: #fff; /* Link color */
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 .links a:hover,
 .social-links a:hover {
-  color: #ccc; /* Hover color */
+  /* color: #ccc; Hover color */
 }
 
 .copy {
@@ -90,6 +91,7 @@ footer {
   .footer-container {
     flex-direction: column;
     gap: 1rem;
+    max-height: 125px
   }
 
   .links,

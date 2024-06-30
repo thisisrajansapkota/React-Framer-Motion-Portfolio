@@ -1,76 +1,166 @@
+p h2{
+  font-weight: 400;
+}
+
 .aboutSection {
-  text-align: center;
-  padding-top: 33px;
-}
-
-.aboutSection .about-me .about-container {
-  height: 50px;
-  display: flex;
-  flex-direction: column;
-}
-
-.aboutSection .about-me .about-container .left {
-  display: none;
-}
-
-.aboutSection .about-me .about-container .right {
+  min-height: 70vh;
+  margin: 10px 10px 0 10px;
+  padding: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.aboutSection .about-me .about-container .right h2 {
-  padding-top: 8px;
-}
-.aboutSection .about-me .about-container .right p {
-font-size: 20px;
-}
-
-.aboutSection .about-me .about-container .right .tag {
-  padding-bottom: 8px;
+.aboutSection .about-me {
   display: flex;
-  justify-content: space-evenly;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
 }
 
-.aboutSection .about-me .about-container .right .interests {
+.aboutSection .about-me .title {
+  display: block;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* About Container Styles */
+.about-container {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  margin-top: 8px;
+  flex-direction: row; /* Adjust as needed */
+  justify-content: center; /* Centering content */
+  gap: 20px;
+  width: 100%;
 }
 
-.aboutSection .about-me .about-container .right .interests span {
-  padding: 4px 12px;
-  margin: 4px;
-  background-color: #faa11b;
-  color: rgb(255, 255, 255);
-  border-radius: 16px;
+/* aboutLeft Section Styles */
+.about-container .aboutLeft {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-container .aboutLeft img {
+  width: 30%;
+  height: auto; /* Ensuring the image scales properly */
+}
+
+/* aboutRight Section Styles */
+.about-container .aboutRight {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about-container .aboutRight p {
+  padding-bottom: 20px;
+}
+
+.about-container .aboutRight .interests {
+  display: flex;
+  padding: 10px;
+  margin: 0;
+}
+
+.about-container .aboutRight .interests .interestItem {
+  
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+
+}
+.about-container .aboutRight .interests .interestItem ul{
+  
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+}
+.interestTooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.interestTooltip .interestTooltiptext {
+    color: rgb(255, 255, 255);
+  visibility: hidden;
+  width: 120px;
+  /* background-color: $primary-color; */
+  background-color: #2b9fb3;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+
+  /* Position the interestTooltip */
+  position: absolute;
+  z-index: 1;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -60px;
+}
+
+.interestTooltip:hover .interestTooltiptext {
+  visibility: visible;
 }
 
 
-/* for screen bigger than 768px */
-@media (min-width: 768px) {
-  .aboutSection .about-me .about-container {
-    flex-direction: row-reverse;
-  }
 
-  .aboutSection .about-me .about-container .left {
-    display: block;
-    flex: 1;
-    order: 2;
-  }
 
-  .aboutSection .about-me .about-container .left .userImg2 {
-    width: 70%;
-    max-width: 200px; /* Adjust as needed */
-    height: auto;
-    display: block;
-    margin: 0 auto;
-  }
+.about-container .aboutRight .interests .interestItem ul li {
+  padding: 1rem;
+  list-style: none;
+}
 
-  .aboutSection .about-me .about-container .right {
-    flex: 1;
-    order: 1;
-    margin-right: 20px; /* Adjust spacing between left and right sections */
+.interestIcon{
+  animation-name: floating;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes floating {
+  0% {
+    transform: translate(0, 0px);
+  }
+  50% {
+    transform: translate(0, 10px);
+  }
+  100% {
+    transform: translate(0, -0px);
   }
 }
+
+.about-container .aboutRight .interests .interestItem div {
+  padding: 6px;
+  margin: 0;
+}
+
+
+@media (max-width: 1100px)
+{
+  .about-container .aboutLeft img {
+    width: 40%; 
+  }}
+
+
+@media (max-width: 768px) {
+  .aboutSection {
+    padding: 10px;
+  }
+
+  .aboutSection .about-me {
+    flex-direction: column;
+  }
+
+  .about-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .about-container .aboutLeft img {
+    width: 40%; /* Increase the width for better visibility */
+  }}

@@ -1,15 +1,29 @@
 import React from "react";
-import "./Hero.css"; // Assuming this is your corresponding CSS file
-import myImage from "../../assets/images/my-image.png";
 import bgVideo from "../../assets/images/bg-video.mp4";
+import myImage from "../../assets/images/my-image.png";
+import "./Hero.css";
+// import heroImg from "../../assets/images/mountains.jpg"
+import heroImg from "../../assets/images/mountainLight.jpg";
 
-function Hero() {
+function Hero({ darkMode }) {
   return (
     <section className="heroSec">
       <div className="hero" id="hero">
-        <video autoPlay muted loop className="video-background">
-          <source src={bgVideo} type="video/mp4" />
-        </video>
+        {darkMode && (
+          <video autoPlay muted loop playsInline className="video-background">
+            {/* <video autoPlay muted loop playsInline className={darkMode ? 'video-background' : 'hero-background'}> */}
+            <source src={bgVideo} type="video/mp4" />
+          </video>
+        )}
+
+        {!darkMode && (
+          <img
+            src={heroImg}
+            className="hero-background"
+            alt="Hero Background"
+          />
+        )}
+
         <div className="content">
           <div className="left">
             <div className="name">
@@ -21,7 +35,7 @@ function Hero() {
             <div className="sub-tag">
               <i>& I love coding.</i>
             </div>
-            <a href="./assets/Resume 24_Rajan_Sapkota.docx" download>
+            <a href="../../assets/RESUME_RAJAN07.docx" download>
               <button className="cv-btn">
                 Download CV
                 <i className="fa-solid fa-download"></i>

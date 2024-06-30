@@ -40,7 +40,7 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="contact-form-container">
+    <div className="contact-form-container" id="contact">
       <h2>Contact Me</h2>
       <form onSubmit={handleSubmit}>
         <div className="form-group">
@@ -93,7 +93,7 @@ const ContactForm = () => {
             required
           ></textarea>
         </div>
-        <button type="submit">SEND</button>
+        <button className="contactBtn" type="submit">SEND</button>
       </form>
       <p>mailto: &quot;thisisrajansapkota@gmail.com&quot;</p>
       <p>Click &lsquo;SEND&lsquo; to open your default email client.</p>

@@ -1,27 +1,27 @@
 .navbar {
-  height: 9vh;
+  height: 8vh;
   padding: 0 15px;
-  /* align-content: center; */
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
 }
 
 .navWrapper {
-  /* max-width: 1366px; */
-  /* margin: auto; */
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-
 
 .navLeft span {
   font-weight: bold;
 }
 
 .navRight {
-  /* max-width: fit-content; */
-   /* filter: brightness(0) invert(1); */
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 
 .navRight ul {
@@ -30,35 +30,73 @@
   justify-content: flex-end;
   gap: 2rem;
   list-style: none;
-  margin: 0; /* Remove default margin */
-  padding: 0; /* Remove default padding */
+  margin: 0;
+  padding: 0;
 }
-/* .navRight ul li img {
-  align-self: center;
-  text-align: center;
-height: 35px;
-width:  35px;
 
-} */
+.middle-section {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
 
+/* Sidebar hidden by default */
+.sidebar {
+  display: none;
+}
 
+/* Sidebar toggle button */
+.sidebar-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+/* Responsive navbar */
 @media (max-width: 768px) {
-  .navWrapper {
-    flex-direction: column; /* Stack items vertically on small screens */
-    align-items: flex-start; /* Align items to the start on small screens */
-  }
-
   .navRight {
-    margin-top: 1rem; /* Add space between navLeft and right sections */
+    display: none;
+    margin-top: 1rem;
   }
 
-  .navRight ul {
-    flex-direction: column; /* Stack li items vertically on small screens */
-    align-items: flex-end; /* Align items to the end on small screens */
+  /* Display the toggle button */
+  .middle-section .sidebar-toggle {
+    display: block;
+    color: #c1b01c;
+    z-index: 999;
   }
 
-  .navRight ul li {
-    margin-right: 0; /* Remove margin between stacked li items */
-    margin-bottom: 0.5rem; /* Add space between stacked li items */
+  .sidebar {
+    z-index: 999;
+    display: block;
+    position: fixed;
+    top: 8vh; /* Adjust to avoid overlap with fixed navbar */
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    padding-top: 1rem;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+  }
+
+  .sidebar.open {
+    transform: translateX(0);
+  }
+
+  .sidebar ul {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    /* gap: 1.3rem; */
+  }
+
+  .sidebar ul li {
+    display: block;
+    margin: 0 auto;
+    list-style: none;
+    padding: 1rem;
   }
 }
