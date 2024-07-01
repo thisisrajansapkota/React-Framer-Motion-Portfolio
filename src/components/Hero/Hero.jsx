@@ -35,7 +35,7 @@ function Hero({ darkMode }) {
             <div className="sub-tag">
               <i>& I love coding.</i>
             </div>
-            <a href="../../assets/RESUME_RAJAN07.docx" download>
+            <a href="/public/RESUME_RAJAN07.docx"  download>
               <button className="cv-btn">
                 Download CV
                 <i className="fa-solid fa-download"></i>
