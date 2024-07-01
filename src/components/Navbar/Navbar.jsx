@@ -8,13 +8,18 @@ import linkedinImg from "../../../src/assets/icons/linkedin.png";
 
 function Navbar({ darkMode, handleClick }) {
   const [sideBar, setSideBar] = useState(false);
+
   const handleSidebarToggle = () => {
     setSideBar(!sideBar);
   };
 
+
+
   const handleLinkClick = () => {
-    setSideBar(false); // Close the sidebar
-    console.log(e);
+
+    setTimeout(() => {
+      setSideBar(false);
+    }, 200); 
   };
 
   return (
@@ -35,7 +40,6 @@ function Navbar({ darkMode, handleClick }) {
           </motion.span>
         </div>
 
-        {/* Middle Section with Toggle theme & toggle menu */}
         <div className="middle-section">
           <div
             className="toggle-container"
@@ -84,16 +88,25 @@ function Navbar({ darkMode, handleClick }) {
               </a>
             </li>
             <li>
-              <a href="#skills">Skills</a>
+              <a href="#skills" onClick={handleLinkClick}
+              >
+                Skills
+              </a>
             </li>
             <li>
-              <a href="#projects">Projects</a>
+              <a href="#projects" onClick={handleLinkClick}>
+                Projects
+              </a>
             </li>
             <li>
-              <a href="#about">About</a>
+              <a href="#about" onClick={handleLinkClick}>
+                About
+              </a>
             </li>
             <li>
-              <a href="#contact">Contact</a>
+              <a href="#contact" onClick={handleLinkClick}>
+                Contact
+              </a>
             </li>
           </motion.ul>
         </div>
@@ -133,7 +146,7 @@ function Navbar({ darkMode, handleClick }) {
               </a>
             </li>
             <li>
-              <a href="#skills" onClick={handleLinkClick}>
+              <a href="#skills" onClick={handleLinkClick} >
                 Skills
               </a>
             </li>

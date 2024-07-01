@@ -96,7 +96,8 @@
 
 @media (max-width: 768px) {
   .parallax {
-    min-height: 60vh;
+    width: 100%;
+    min-height: 70vh;
     background-size: cover;
     background-position: center;
   }
@@ -120,7 +121,8 @@
 
 @media (max-width: 600px) {
   .parallax {
-    min-height: 50vh;
+    width: 100%;
+    min-height: 65vh;
     background-size: cover;
     background-position: center;
   }
@@ -144,9 +146,10 @@
 
 @media (max-width: 480px) {
   .parallax {
+    width: 100%;
     background-size: cover;
     background-position: center;
-    /* min-height: 50vh; */
+    min-height: 60vh;
   }
 
   .parallax .text h1 {
@@ -160,10 +163,11 @@
   .mountains,
   .planets,
   .stars {
-    background-size: contain; 
-    background-repeat: no-repeat;
+    background-size: cover; 
+    /* background-repeat: no-repeat; */
     background-position: center;
      width: 100%;
+    ;
   }
 
   .parallax .text {
