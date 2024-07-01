@@ -6,15 +6,17 @@ import moonIcon from "../../assets/moon.svg";
 import githubImg from "../../../src/assets/icons/github.png";
 import linkedinImg from "../../../src/assets/icons/linkedin.png";
 
-
 function Navbar({ darkMode, handleClick }) {
   const [sideBar, setSideBar] = useState(false);
   const handleSidebarToggle = () => {
     setSideBar(!sideBar);
   };
 
+  const handleLinkClick = () => {
+    setSideBar(false); // Close the sidebar
+    console.log(e);
+  };
 
- 
   return (
     <div
       className="navbar"
@@ -95,7 +97,7 @@ function Navbar({ darkMode, handleClick }) {
             </li>
           </motion.ul>
         </div>
-        {/* <div className="div"></div> */}
+
         <div
           className={sideBar ? "sidebar open" : "sidebar"}
           style={{ backgroundColor: darkMode ? "black" : "white" }}
@@ -109,7 +111,11 @@ function Navbar({ darkMode, handleClick }) {
             }}
           >
             <li>
-              <a href="https://github.com/thisisrajansapkota" target="_blank">
+              <a
+                href="https://github.com/thisisrajansapkota"
+                target="_blank"
+                onClick={handleLinkClick}
+              >
                 <img
                   src={githubImg}
                   alt="github"
@@ -121,21 +127,30 @@ function Navbar({ darkMode, handleClick }) {
               <a
                 href="https://www.linkedin.com/in/rajan-sapkota-88b95a18b/"
                 target="_blank"
+                onClick={handleLinkClick}
               >
                 <img src={linkedinImg} alt="linkedin" />
               </a>
             </li>
             <li>
-              <a href="#skills">Skills</a>
+              <a href="#skills" onClick={handleLinkClick}>
+                Skills
+              </a>
             </li>
             <li>
-              <a href="#projects">Projects</a>
+              <a href="#projects" onClick={handleLinkClick}>
+                Projects
+              </a>
             </li>
             <li>
-              <a href="#about">About</a>
+              <a href="#about" onClick={handleLinkClick}>
+                About
+              </a>
             </li>
             <li>
-              <a href="#contact">Contact</a>
+              <a href="#contact" onClick={handleLinkClick}>
+                Contact
+              </a>
             </li>
           </motion.ul>
         </div>
