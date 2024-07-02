@@ -6,9 +6,11 @@ import "./Hero.css";
 import heroImg from "../../assets/images/mountainLight.jpg";
 
 function Hero({ darkMode }) {
+   
+
   return (
     <section className="heroSec">
-      <div className="hero" id="hero">
+      <div className="hero" id="hero" >
         {darkMode && (
           <video autoPlay muted loop playsInline className="video-background">
             {/* <video autoPlay muted loop playsInline className={darkMode ? 'video-background' : 'hero-background'}> */}
@@ -35,7 +37,7 @@ function Hero({ darkMode }) {
             <div className="sub-tag">
               <i>& I love coding.</i>
             </div>
-            <a href="/public/RESUME_RAJAN07.docx"  download>
+            <a href="/public/RESUME_RAJAN.pdf" download>
               <button className="cv-btn">
                 Download CV
                 <i className="fa-solid fa-download"></i>

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./Navbar.css";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import sunIcon from "../../assets/sun.svg";
 import moonIcon from "../../assets/moon.svg";
 import githubImg from "../../../src/assets/icons/github.png";
@@ -13,13 +14,10 @@ function Navbar({ darkMode, handleClick }) {
     setSideBar(!sideBar);
   };
 
-
-
   const handleLinkClick = () => {
-
     setTimeout(() => {
       setSideBar(false);
-    }, 200); 
+    }, 200);
   };
 
   return (
@@ -28,7 +26,13 @@ function Navbar({ darkMode, handleClick }) {
       style={{ backgroundColor: darkMode ? "black" : "#fff" }}
     >
       <div className="navWrapper">
+        {/* <li>
+          <Link to="/skills" onClick={handleLinkClick}>
+            Skills
+          </Link>
+        </li> */}
         <div className="navLeft">
+            <Link to="/" onClick={handleLinkClick}>
           <motion.span
             initial={{ opacity: 0, scale: 0.5 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -37,7 +41,9 @@ function Navbar({ darkMode, handleClick }) {
             }}
           >
             RAJAN
+            
           </motion.span>
+           </Link>
         </div>
 
         <div className="middle-section">
@@ -88,25 +94,29 @@ function Navbar({ darkMode, handleClick }) {
               </a>
             </li>
             <li>
-              <a href="#skills" onClick={handleLinkClick}
-              >
+              <Link to="/" onClick={handleLinkClick}>
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link to="/skills" onClick={handleLinkClick}>
                 Skills
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#projects" onClick={handleLinkClick}>
+              <Link to="/portfolio" onClick={handleLinkClick}>
                 Projects
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#about" onClick={handleLinkClick}>
+              <Link to="/about" onClick={handleLinkClick}>
                 About
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#contact" onClick={handleLinkClick}>
+              <Link to="/contact" onClick={handleLinkClick}>
                 Contact
-              </a>
+              </Link>
             </li>
           </motion.ul>
         </div>
@@ -146,24 +156,29 @@ function Navbar({ darkMode, handleClick }) {
               </a>
             </li>
             <li>
-              <a href="#skills" onClick={handleLinkClick} >
+              <Link to="/" onClick={handleLinkClick}>
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link to="/skills" onClick={handleLinkClick}>
                 Skills
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#projects" onClick={handleLinkClick}>
+              <Link to="/portfolio" onClick={handleLinkClick}>
                 Projects
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#about" onClick={handleLinkClick}>
+              <Link to="/about" onClick={handleLinkClick}>
                 About
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#contact" onClick={handleLinkClick}>
+              <Link to="/contact" onClick={handleLinkClick}>
                 Contact
-              </a>
+              </Link>
             </li>
           </motion.ul>
         </div>

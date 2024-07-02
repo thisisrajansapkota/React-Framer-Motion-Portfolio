@@ -13,13 +13,11 @@ const ContactForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Show toast message
     toast.success("Sending Message!", {
     //   position: toast.POSITION.TOP_LEFT,
       autoClose: 2000, // Close toast after 2 seconds
     });
 
-    // Delay opening mail app to let user see the toast
     setTimeout(() => {
       const mailToLink = `mailto:thisisrajansapkota@gmail.com?subject=Message%20from%20${encodeURIComponent(
         firstName
@@ -31,7 +29,6 @@ const ContactForm = () => {
       window.location.href = mailToLink;
     }, 2000); // Open mail app after 2 seconds
 
-    // Reset form fields (optional)
     setFirstName("");
     setLastName("");
     setPhoneNumber("");

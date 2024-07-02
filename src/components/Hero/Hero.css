@@ -5,12 +5,15 @@
   box-sizing: border-box;
 }
 
-/* Ensure video takes up entire screen */
 .heroSec {
+
+
   position: relative;
   width: 100vw;
   height: 100vh;
   overflow: hidden;
+
+
 }
 
 .video-background {
