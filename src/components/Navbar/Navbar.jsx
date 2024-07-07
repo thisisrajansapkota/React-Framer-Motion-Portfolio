@@ -1,11 +1,10 @@
-import React, { useState } from "react";
-import "./Navbar.css";
 import { motion } from "framer-motion";
-import sunIcon from "../../assets/sun.svg";
-import moonIcon from "../../assets/moon.svg";
+import React, { useState } from "react";
 import githubImg from "../../../src/assets/icons/github.png";
 import linkedinImg from "../../../src/assets/icons/linkedin.png";
-
+import moonIcon from "../../assets/moon.svg";
+import sunIcon from "../../assets/sun.svg";
+import "./Navbar.css";
 
 function Navbar({ darkMode, handleClick }) {
   const [sideBar, setSideBar] = useState(false);
@@ -13,8 +12,6 @@ function Navbar({ darkMode, handleClick }) {
     setSideBar(!sideBar);
   };
 
-
- 
   return (
     <div
       className="navbar"

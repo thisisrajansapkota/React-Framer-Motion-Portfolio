@@ -33,14 +33,19 @@ function Hero({ darkMode }) {
               <h3>Web Developer</h3>
             </div>
             <div className="sub-tag">
-              <i>& I love coding.</i>
+              <br />
+              <h4>
+               
+                <i style={{ color: "white", fontSize: "23px" }}>& I love coding.</i>
+              </h4>
             </div>
-            <a href="../../assets/RESUME_RAJAN07.docx" download>
+
+            {/* <a href="../../assets/RESUME_RAJAN07.docx" download>
               <button className="cv-btn">
                 Download CV
                 <i className="fa-solid fa-download"></i>
               </button>
-            </a>
+            </a> */}
           </div>
           <div className="right">
             <img src={myImage} alt="my photo" />
