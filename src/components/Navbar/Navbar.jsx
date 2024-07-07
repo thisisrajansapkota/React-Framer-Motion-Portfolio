@@ -1,18 +1,11 @@
-import { motion } from "framer-motion";
-<<<<<<< HEAD
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 import githubImg from "../../../src/assets/icons/github.png";
 import linkedinImg from "../../../src/assets/icons/linkedin.png";
 import moonIcon from "../../assets/moon.svg";
 import sunIcon from "../../assets/sun.svg";
 import "./Navbar.css";
-=======
-import { Link } from "react-router-dom";
-import sunIcon from "../../assets/sun.svg";
-import moonIcon from "../../assets/moon.svg";
-import githubImg from "../../../src/assets/icons/github.png";
-import linkedinImg from "../../../src/assets/icons/linkedin.png";
->>>>>>> 6879c48635499ca42016c88ff6728215c8d56898
 
 function Navbar({ darkMode, handleClick }) {
   const [sideBar, setSideBar] = useState(false);
@@ -21,39 +14,30 @@ function Navbar({ darkMode, handleClick }) {
     setSideBar(!sideBar);
   };
 
-<<<<<<< HEAD
-=======
   const handleLinkClick = () => {
     setTimeout(() => {
       setSideBar(false);
     }, 200);
   };
 
->>>>>>> 6879c48635499ca42016c88ff6728215c8d56898
   return (
     <div
       className="navbar"
       style={{ backgroundColor: darkMode ? "black" : "#fff" }}
     >
       <div className="navWrapper">
-        {/* <li>
-          <Link to="/skills" onClick={handleLinkClick}>
-            Skills
-          </Link>
-        </li> */}
         <div className="navLeft">
-            <Link to="/" onClick={handleLinkClick}>
-          <motion.span
-            initial={{ opacity: 0, scale: 0.5 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{
-              duration: 1,
-            }}
-          >
-            RAJAN
-            
-          </motion.span>
-           </Link>
+          <Link to="/" onClick={handleLinkClick}>
+            <motion.span
+              initial={{ opacity: 0, scale: 0.5 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{
+                duration: 1,
+              }}
+            >
+              RAJAN
+            </motion.span>
+          </Link>
         </div>
 
         <div className="middle-section">

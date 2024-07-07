@@ -2,18 +2,14 @@ import React from "react";
 import bgVideo from "../../assets/images/bg-video.mp4";
 import myImage from "../../assets/images/my-image.png";
 import "./Hero.css";
-// import heroImg from "../../assets/images/mountains.jpg"
-import heroImg from "../../assets/images/mountainLight.jpg";
+import heroImg from "../../assets/images/mountainLight.jpg"; // Assuming this is your default hero image
 
 function Hero({ darkMode }) {
-   
-
   return (
     <section className="heroSec">
-      <div className="hero" id="hero" >
+      <div className="hero" id="hero">
         {darkMode && (
           <video autoPlay muted loop playsInline className="video-background">
-            {/* <video autoPlay muted loop playsInline className={darkMode ? 'video-background' : 'hero-background'}> */}
             <source src={bgVideo} type="video/mp4" />
           </video>
         )}
@@ -37,16 +33,13 @@ function Hero({ darkMode }) {
             <div className="sub-tag">
               <br />
               <h4>
-               
-                <i style={{ color: "white", fontSize: "23px" }}>& I love coding.</i>
+                <i style={{ color: "white", fontSize: "23px" }}>
+                  & I love coding.
+                </i>
               </h4>
             </div>
-<<<<<<< HEAD
-
-            {/* <a href="../../assets/RESUME_RAJAN07.docx" download>
-=======
-            <a href="/public/RESUME_RAJAN.pdf" download>
->>>>>>> 6879c48635499ca42016c88ff6728215c8d56898
+            {/* Uncomment and fix the download link */}
+            {/* <a href="/public/RESUME_RAJAN.pdf" download>
               <button className="cv-btn">
                 Download CV
                 <i className="fa-solid fa-download"></i>
