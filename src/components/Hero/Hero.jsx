@@ -6,9 +6,11 @@ import "./Hero.css";
 import heroImg from "../../assets/images/mountainLight.jpg";
 
 function Hero({ darkMode }) {
+   
+
   return (
     <section className="heroSec">
-      <div className="hero" id="hero">
+      <div className="hero" id="hero" >
         {darkMode && (
           <video autoPlay muted loop playsInline className="video-background">
             {/* <video autoPlay muted loop playsInline className={darkMode ? 'video-background' : 'hero-background'}> */}
@@ -39,8 +41,12 @@ function Hero({ darkMode }) {
                 <i style={{ color: "white", fontSize: "23px" }}>& I love coding.</i>
               </h4>
             </div>
+<<<<<<< HEAD
 
             {/* <a href="../../assets/RESUME_RAJAN07.docx" download>
+=======
+            <a href="/public/RESUME_RAJAN.pdf" download>
+>>>>>>> 6879c48635499ca42016c88ff6728215c8d56898
               <button className="cv-btn">
                 Download CV
                 <i className="fa-solid fa-download"></i>

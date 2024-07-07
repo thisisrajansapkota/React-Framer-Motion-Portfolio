@@ -1,8 +1,5 @@
-/* Reset and basic styles */
-html {
-  scroll-snap-type: y mandatory;
-  scroll-behavior: smooth;
-}
+
+
 * {
   padding: 0;
   margin: 0;
@@ -20,7 +17,7 @@ a {
 section {
   /* min-height: 100vh; */
   /* padding: 0 35px; */
-  scroll-snap-align: center;
+  scroll-snap-align: start;
 }
 
 /* Dark mode styles */
