@@ -25,7 +25,7 @@ function Hero({ darkMode }) {
         <div className="content">
           <div className="left">
             <div className="name">
-              <h1>RAJAN</h1>
+              <h1>RAJANnnn</h1>
             </div>
             <div className="tag">
               <h3>Web Developer</h3>
