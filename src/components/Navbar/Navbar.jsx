@@ -6,6 +6,7 @@ import linkedinImg from "../../../src/assets/icons/linkedin.png";
 import moonIcon from "../../assets/moon.svg";
 import sunIcon from "../../assets/sun.svg";
 import "./Navbar.css";
+import { ToastContainer } from "react-toastify";
 
 function Navbar({ darkMode, handleClick }) {
   const [sideBar, setSideBar] = useState(false);
@@ -32,10 +33,10 @@ function Navbar({ darkMode, handleClick }) {
               initial={{ opacity: 0, scale: 0.5 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{
-                duration: 1,
+                duration: 6,
               }}
             >
-              RAJAN
+              R A J A N
             </motion.span>
           </Link>
         </div>

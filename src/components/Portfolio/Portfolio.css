@@ -35,6 +35,7 @@
 
 .project-card:hover {
   transform: translateY(-5px);
+  box-shadow: 4px 4px 8px #6c624d;
 }
 
 .project-card .top img {

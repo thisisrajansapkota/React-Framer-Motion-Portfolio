@@ -24,19 +24,28 @@ function Hero({ darkMode }) {
 
         <div className="content">
           <div className="left">
-            <div className="name">
-              <h1>RAJANnnn</h1>
+            <div className="rajan">
+              <h1 className="name-char">R</h1>
+              <h1 className="name-char">A</h1>
+              <h1 className="name-char">J</h1>
+              <h1 className="name-char">A</h1>
+              <h1 className="name-char">N</h1>
             </div>
             <div className="tag">
-              <h3>Web Developer</h3>
+              <h2 className="tag-word">A</h2>
+              <h2 className="tag-word">Passionate</h2>
+              <h2 className="tag-word">Programmer</h2>
+              <h2 className="tag-word">.</h2>
+              <h2 className="tag-word">.</h2>
+              <h2 className="tag-word">.</h2>
             </div>
             <div className="sub-tag">
               <br />
-              <h4>
+              {/* <h4>
                 <i style={{ color: "white", fontSize: "23px" }}>
                   & I love coding.
                 </i>
-              </h4>
+              </h4> */}
             </div>
             {/* Uncomment and fix the download link */}
             {/* <a href="/public/RESUME_RAJAN.pdf" download>

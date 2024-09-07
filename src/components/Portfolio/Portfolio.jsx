@@ -8,12 +8,39 @@ import githubImg from "../../assets/icons/github.png";
 import quizImg from "../../assets/projectImg/QuizApp.png";
 import userImg from "../../assets/projectImg/RandomUserAPI-JS.png";
 import weatherImg from "../../assets/projectImg/weather.png";
+import cryptoMate from '../../assets/projectImg/crypto-mate.png'
+import carManagement from '../../assets/projectImg/car-management.png'
 
 const Portfolio = () => {
   return (
     <div className="portfolio" id="projects">
       <h2 className="title">My Recent Projects</h2>
       <div className="project-container">
+        <div className="project-card">
+          <a
+            href="https://auto-management.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div className="top">
+              <img src={carManagement} />
+            </div>
+            <div className="bottom">
+              <a
+                href="https://github.com/thisisrajansapkota/auto-management"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <div className="icons">
+                  <i className="fa-brands fa-github"></i>
+                </div>
+              </a>
+              <p>Car Management System</p>
+              <p>Angular, Typescript, Firebase</p>
+            </div>
+          </a>
+        </div>
+
         <div className="project-card">
           <a
             href="https://movie-search-reactjs.vercel.app/"
@@ -35,31 +62,6 @@ const Portfolio = () => {
               </a>
               <p>Movie Search</p>
               <p>ReactJs, API call</p>
-            </div>
-          </a>
-        </div>
-
-        <div className="project-card">
-          <a
-            href="https://javascript-calculator-mu.vercel.app/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <div className="top">
-              <img src={calculatorImg} />
-            </div>
-            <div className="bottom">
-              <a
-                href="https://github.com/thisisrajansapkota/prank-calculator-react"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <div className="icons">
-                  <i className="fa-brands fa-github"></i>
-                </div>
-              </a>
-              <p>Calculator App</p>
-              <p>HTML, CSS, JavaScript</p>
             </div>
           </a>
         </div>
@@ -141,16 +143,16 @@ const Portfolio = () => {
 
         <div className="project-card">
           <a
-            href="https://react-quiz-app-ochre.vercel.app/"
+            href="https://crypto-market-black.vercel.app/"
             target="_blank"
             rel="noopener noreferrer"
           >
             <div className="top">
-              <img src={quizImg} alt="Project" />
+              <img src={cryptoMate} />
             </div>
             <div className="bottom">
               <a
-                href="https://github.com/thisisrajansapkota/react-quiz-app.git"
+                href="https://github.com/thisisrajansapkota/crypto-market"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -158,8 +160,8 @@ const Portfolio = () => {
                   <i className="fa-brands fa-github"></i>
                 </div>
               </a>
-              <p>Quiz App</p>
-              <p>React Js </p>
+              <p>CryptoMate</p>
+              <p>React JS, Coingecko API</p>
             </div>
           </a>
         </div>

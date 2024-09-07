@@ -7,7 +7,8 @@ import nodejs from '../../assets/icons/nodejs.png'
 import mui from '../../assets/icons/mui.png'
 import figma from '../../assets/icons/figma.png'
 import firebase from "../../assets/icons/firebase.png";
-
+import mongodb from '../../assets/icons/mongodb.png';
+import typescript from '../../assets/icons/typescript.png';
 import framerMotion from "../../assets/icons/framer-motion.png";
 
 
@@ -30,6 +31,25 @@ function Skills() {
         <div className="skills">
           <i className="fa-brands fa-react"></i>
           <div>React.js</div>
+        </div>
+      </div>
+
+      <br />
+
+      <div className="skills-container">
+        <div className="skills">
+          <i className="fa-brands fa-angular"></i>
+          <div>Angular</div>
+        </div>
+
+        <div className="skills">
+          <i class="fa-solid fa-database"></i>
+          <div>Database</div>
+        </div>
+
+        <div className="skills">
+          <i className="fa-brands fa-node-js"></i>
+          <div>Node JS</div>
         </div>
       </div>
 
@@ -87,8 +107,8 @@ function Skills() {
               <span className="tooltiptext">Responsive Web Design</span>
             </li>
             <li className="tooltip">
-              <img className="skillicon" src={nodejs} alt="Node js" />
-              <span className="tooltiptext">NodeJs</span>
+              <img className="skillicon" src={typescript} alt="Node js" />
+              <span className="tooltiptext">Typescript</span>
             </li>
           </ul>
         </div>
@@ -114,6 +134,10 @@ function Skills() {
                 alt="Framer Motion"
               />
               <span className="tooltiptext">Framer Motion</span>
+            </li>
+            <li className="tooltip">
+              <img className="skillicon" src={mongodb} alt="Mongo DB" />
+              <span className="tooltiptext">Mongo DB</span>
             </li>
           </ul>
         </div>
